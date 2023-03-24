@@ -1,0 +1,67 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	color: #333;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 36px;
+	text-align: center;
+	line-height: 100%; 
+	height: 100%; 
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+}
+
+main {
+	height: calc(100vh - 120px); 
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+}
+
+.content-wrapper {
+	max-width: 800px; 
+	text-align: center;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+button a {
+	color: #fff;
+	text-decoration: none;
+}
+
+button:hover {
+	background-color: #0069d9;
+}
+* {
+    -webkit-user-select: none; /* запретить выделение на WebKit */
+    -moz-user-select: none; /* запретить выделение на Gecko */
+    -ms-user-select: none; /* запретить выделение на Trident */
+    user-select: none; /* стандартный способ запретить выделение */
+}
