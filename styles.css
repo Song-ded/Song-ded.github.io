@@ -35,6 +35,24 @@ main {
 	text-align: center;
 }
 
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li {
+	margin: 0 500px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	background-color: #007bff;
+}
+
 p {
 	font-size: 18px;
 	line-height: 1.5;
@@ -58,10 +76,4 @@ button a {
 
 button:hover {
 	background-color: #0069d9;
-}
-* {
-    -webkit-user-select: none; /* запретить выделение на WebKit */
-    -moz-user-select: none; /* запретить выделение на Gecko */
-    -ms-user-select: none; /* запретить выделение на Trident */
-    user-select: none; /* стандартный способ запретить выделение */
 }

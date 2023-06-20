@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .centered-p {
+            text-align: center;
+        }
+        .table-container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 6px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        #header {
+            position: fixed;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            line-height: 50px;
+            transition: top 0.3s ease-in-out;
+        }
+
+        #header.visible {
+            top: 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclide</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollPosition > 50) {
+                header.classList.add('visible');
+            } else {
+                header.classList.remove('visible');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1>Inclide</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="codes.html">Клавиши</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+    <div class="centered-container">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Код клавиши</th>
+                    <th>Название клавиши</th>
+                </tr>
+                <tr>
+                    <td>0x01</td>
+                    <td>Левая кнопка мыши</td>
+                </tr>
+                <tr>
+                    <td>0x02</td>
+                    <td>Правая кнопка мыши</td>
+                </tr>
+                <tr>
+                    <td>0x03</td>
+                    <td>Обработка контрольных остановов</td>
+                </tr>
+                <tr>
+                    <td>0x04</td>
+                    <td>Средняя кнопка мыши (мышь с тремя кнопками)</td>
+                </tr>
+                <tr>
+                    <td>0x05</td>
+                    <td>Кнопка мыши X1</td>
+                </tr>
+                <tr>
+                    <td>0x06</td>
+                    <td>Кнопка мыши X2</td>
+                </tr>
+                <tr>
+                    <td>0x08</td>
+                    <td>Backspace</td>
+                </tr>
+                <tr>
+                    <td>0x09</td>
+                    <td>TAB - клавиша</td>
+                </tr>
+                <tr>
+                    <td>0x10</td>
+                    <td>Клавиша SHIFT</td>
+                </tr>
+                <tr>
+                    <td>0x11</td>
+                    <td>Клавиша CTRL</td>
+                </tr>
+                <tr>
+                    <td>0x12</td>
+                    <td>ALT - клавиша</td>
+                </tr>
+                <tr>
+                    <td>0x13</td>
+                    <td>Клавиша PAUSE</td>
+                </tr>
+                <tr>
+                    <td>0x14</td>
+                    <td>КЛАВИША CAPS LOCK</td>
+                </tr>
+                <tr>
+                    <td>0x1B</td>
+                    <td>Клавиша ESC</td>
+                </tr>
+                <tr>
+                    <td>0x20</td>
+                    <td>ПРОБЕЛ</td>
+                </tr>
+                <tr>
+                    <td>0x21</td>
+                    <td>КЛАВИША PAGE UP</td>
+                </tr>
+                <tr>
+                    <td>0x22</td>
+                    <td>КЛАВИША PAGE DOWN</td>
+                </tr>
+                <tr>
+                    <td>0x23</td>
+                    <td>Клавиша END</td>
+                </tr>
+                <tr>
+                    <td>0x24</td>
+                    <td>Ключ HOME</td>
+                </tr>
+                <tr>
+                    <td>0x25</td>
+                    <td>КЛАВИША СТРЕЛКА ВЛЕВО</td>
+                </tr>
+                <tr>
+                    <td>0x26</td>
+                    <td>КЛАВИША СТРЕЛКА ВВЕРХ</td>
+                </tr>
+                <tr>
+                    <td>0x27</td>
+                    <td>КЛАВИША СТРЕЛКА ВПРАВО</td>
+                </tr>
+                <tr>
+                    <td>0x28</td>
+                    <td>КЛАВИША СТРЕЛКА ВНИЗ</td>
+                </tr>
+                <tr>
+                    <td>0x29</td>
+                    <td>Клавиша SELECT</td>
+                </tr>
+                <tr>
+                    <td>0x2A</td>
+                    <td>Клавиша PRINT</td>
+                </tr>
+                <tr>
+                    <td>0x2B</td>
+                    <td>Клавиша EXECUTE</td>
+                </tr>
+                <tr>
+                    <td>0x2C</td>
+                    <td>КЛАВИША PRINT SCREEN</td>
+                </tr>
+                <tr>
+                    <td>0x2D</td>
+                    <td>Ключ INS</td>
+                </tr>
+                <tr>
+                    <td>0x2E</td>
+                    <td>Клавиша DEL</td>
+                </tr>
+                <tr>
+                    <td>0x2F</td>
+                    <td>Клавиша HELP</td>
+                </tr>
+                <tr>
+                    <td>0x30</td>
+                    <td>0 клавиши</td>
+                </tr>
+                <tr>
+                    <td>0x31</td>
+                    <td>1 клавиша</td>
+                </tr>
+                <tr>
+                    <td>0x32</td>
+                    <td>2 клавиши</td>
+                </tr>
+                <tr>
+                    <td>0x33</td>
+                    <td>3 клавиши</td>
+                </tr>
+                <tr>
+                    <td>0x34</td>
+                    <td>4 клавиши</td>
+                </tr>
+                <tr>
+                    <td>0x35</td>
+                    <td>5 клавиш</td>
+                </tr>
+                <tr>
+                    <td>0x36</td>
+                    <td>6 клавиш</td>
+                </tr>
+                <tr>
+                    <td>0x37</td>
+                    <td>7 клавиш</td>
+                </tr>
+                <tr>
+                    <td>0x38</td>
+                    <td>8 клавиш</td>
+                </tr>
+                <tr>
+                    <td>0x39</td>
+                    <td>9 клавиш</td>
+                </tr>
+                <tr>
+                    <td>0x42</td>
+                    <td>Клавиша B</td>
+                </tr>
+                <tr>
+                    <td>0x43</td>
+                    <td>Клавиша C</td>
+                </tr>
+                <tr>
+                    <td>0x44</td>
+                    <td>Клавиша D</td>
+                </tr>
+                <tr>
+                    <td>0x45</td>
+                    <td>Клавиша E</td>
+                </tr>
+                <tr>
+                    <td>0x46</td>
+                    <td>Клавиша F</td>
+                </tr>
+                <tr>
+                    <td>0x47</td>
+                    <td>Клавиша G</td>
+                </tr>
+                <tr>
+                    <td>0x48</td>
+                    <td>Клавиша H</td>
+                </tr>
+                <tr>
+                    <td>0x49</td>
+                    <td>Клавиша I</td>
+                </tr>
+                <tr>
+                    <td>0x4A</td>
+                    <td>Клавиша J</td>
+                </tr>
+                <tr>
+                    <td>0x4B</td>
+                    <td>Клавиша K</td>
+                </tr>
+                <tr>
+                    <td>0x4C</td>
+                    <td>Клавиша L</td>
+                </tr>
+                <tr>
+                    <td>0x4D</td>
+                    <td>Клавиша M</td>
+                </tr>
+                <tr>
+                    <td>0x4E</td>
+                    <td>Клавиша N</td>
+                </tr>
+                <tr>
+                    <td>0x4F</td>
+                    <td>Клавиша O</td>
+                </tr>
+                <tr>
+                    <td>0x50</td>
+                    <td>Клавиша P</td>
+                </tr>
+                <tr>
+                    <td>0x51</td>
+                    <td>Клавиша Q</td>
+                </tr>
+                <tr>
+                    <td>0x52</td>
+                    <td>Клавиша R</td>
+                </tr>
+                <tr>
+                    <td>0x53</td>
+                    <td>Клавиша S</td>
+                </tr>
+                <tr>
+                    <td>0x54</td>
+                    <td>Клавиша T</td>
+                </tr>
+                <tr>
+                    <td>0x55</td>
+                    <td>Клавиша U</td>
+                </tr>
+                <tr>
+                    <td>0x56</td>
+                    <td>Клавиша V</td>
+                </tr>
+                <tr>
+                    <td>0x57</td>
+                    <td>Клавиша W</td>
+                </tr>
+                <tr>
+                    <td>0x58</td>
+                    <td>Клавиша X</td>
+                </tr>
+                <tr>
+                    <td>0x59</td>
+                    <td>Клавиша Y</td>
+                </tr>
+                <tr>
+                    <td>0x5A</td>
+                    <td>Клавиша Z</td>
+                </tr>
+                <tr>
+                    <td>0x5B</td>
+                    <td>Левая клавиша WIN</td>
+                </tr>
+                <tr>
+                    <td>0x5C</td>
+                    <td>Правая клавиша WIN</td>
+                </tr>
+                <tr>
+                    <td>0x5D</td>
+                    <td>Клавиша APPLICATION</td>
+                </tr>
+                <tr>
+                    <td>0x5F</td>
+                    <td>Клавиша SLEEP</td>
+                </tr>
+                <tr>
+                    <td>0x60</td>
+                    <td>Клавиша NUMPAD 0</td>
+                </tr>
+                <tr>
+                    <td>0x61</td>
+                    <td>Клавиша NUMPAD 1</td>
+                </tr>
+                <tr>
+                    <td>0x62</td>
+                    <td>Клавиша NUMPAD 2</td>
+                </tr>
+                <tr>
+                    <td>0x63</td>
+                    <td>Клавиша NUMPAD 3</td>
+                </tr>
+                <tr>
+                    <td>0x64</td>
+                    <td>Клавиша NUMPAD 4</td>
+                </tr>
+                <tr>
+                    <td>0x65</td>
+                    <td>Клавиша NUMPAD 5</td>
+                </tr>
+                <tr>
+                    <td>0x66</td>
+                    <td>Клавиша NUMPAD 6</td>
+                </tr>
+                <tr>
+                    <td>0x67</td>
+                    <td>Клавиша NUMPAD 7</td>
+                </tr>
+                <tr>
+                    <td>0x68</td>
+                    <td>Клавиша NUMPAD 8</td>
+                </tr>
+                <tr>
+                    <td>0x69</td>
+                    <td>Клавиша NUMPAD 9</td>
+                </tr>
+                <tr>
+                    <td>0x6A</td>
+                    <td>Клавиша MULTIPLY</td>
+                </tr>
+                <tr>
+                    <td>0x6B</td>
+                    <td>Клавиша ADD</td>
+                </tr>
+                <tr>
+                    <td>0x6C</td>
+                    <td>Клавиша SEPARATOR</td>
+                </tr>
+                <tr>
+                    <td>0x6D</td>
+                    <td>Клавиша SUBTRACT</td>
+                </tr>
+                <tr>
+                    <td>0x6E</td>
+                    <td>Клавиша DECIMAL</td>
+                </tr>
+                <tr>
+                    <td>0x6F</td>
+                    <td>Клавиша DIVIDE</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+		<p>&copy; 2023 Inclide. Все права защищены.</p>
+	</footer>
+    
+</body>
+</html>
